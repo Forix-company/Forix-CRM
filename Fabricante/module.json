@@ -1,0 +1,13 @@
+{
+    "name": "Fabricante",
+    "alias": "fabricante",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Fabricante\\Providers\\FabricanteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

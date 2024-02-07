@@ -1,0 +1,13 @@
+{
+    "name": "Pasarela",
+    "alias": "pasarela",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Pasarela\\Providers\\PasarelaServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,23 @@
+{
+    "name": "nwidart/devolucion",
+    "description": "",
+    "authors": [
+        {
+            "name": "Jhonatan Fernandez M",
+            "email": "jhonatan.fernandez1153@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Devolucion\\": ""
+        }
+    }
+}

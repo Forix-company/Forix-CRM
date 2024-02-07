@@ -1,0 +1,13 @@
+{
+    "name": "Proveedores",
+    "alias": "proveedores",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Proveedores\\Providers\\ProveedoresServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

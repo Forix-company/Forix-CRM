@@ -1,0 +1,13 @@
+{
+    "name": "Devolucion",
+    "alias": "devolucion",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Devolucion\\Providers\\DevolucionServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
