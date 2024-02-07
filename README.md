@@ -1,8 +1,8 @@
 # Forix-CRM
-Forix CRM is a modular system in which it has modules intended for use by a company.
+Forix CRM is a modular system in which it has modules intended for use by a company. These modules are designed to address various aspects of customer relationship management, including sales, marketing, customer service, and analytics. Each module can be customized and integrated according to the specific needs and preferences of the organization, allowing for a tailored CRM solution that aligns with business objectives and workflows. Additionally, the modular nature of Forix CRM enables scalability, ensuring that the system can grow and evolve alongside the company as its requirements change over time.
 
 ## events
-The CRM has events that are executed from the modules to automate tasks
+The CRM has events that are executed from the modules to automate tasks. These events serve as triggers for predefined actions, allowing for seamless automation of routine processes and workflows within the system. For example, when a new lead is added to the CRM, an event can be triggered to automatically send a welcome email or assign the lead to a sales representative for follow-up. Similarly, events can be configured to update customer records, schedule follow-up tasks, or generate reports based on specific criteria. By leveraging events within the CRM modules, organizations can streamline their operations, improve efficiency, and provide a more personalized experience for their customers.
 
 ## consoles
-The CRM has a console command to bring information through the Fetch API.
+The CRM has a console command to bring information through the Fetch API. This command allows users to retrieve data from external sources or web services using the Fetch API, which is a modern JavaScript interface for fetching resources asynchronously across the network. With this capability, users can seamlessly integrate data from external systems or online sources into the CRM, enhancing its functionality and providing a more comprehensive view of customer information. Whether pulling in data from social media platforms, third-party databases, or other web services, the Fetch API console command empowers users to access and leverage a wide range of data within the CRM environment.
