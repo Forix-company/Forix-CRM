@@ -1,7 +1,7 @@
 # Forix-CRM
 Forix CRM is a modular system in which it has modules intended for use by a company. These modules are designed to address various aspects of customer relationship management, including sales, marketing, customer service, and analytics. Each module can be customized and integrated according to the specific needs and preferences of the organization, allowing for a tailored CRM solution that aligns with business objectives and workflows. Additionally, the modular nature of Forix CRM enables scalability, ensuring that the system can grow and evolve alongside the company as its requirements change over time.
 
-## events
+## events and tasks
 The CRM has events that are executed from the modules to automate tasks. These events serve as triggers for predefined actions, allowing for seamless automation of routine processes and workflows within the system. For example, when a new lead is added to the CRM, an event can be triggered to automatically send a welcome email or assign the lead to a sales representative for follow-up. Similarly, events can be configured to update customer records, schedule follow-up tasks, or generate reports based on specific criteria. By leveraging events within the CRM modules, organizations can streamline their operations, improve efficiency, and provide a more personalized experience for their customers.
 
 ## consoles
