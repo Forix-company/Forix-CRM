@@ -16,6 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::resource('ventas', VentasController::class);
 
 Route::get('ventas/payments/{id}', 'VentasController@SaleEmailPayments')->name('ventas.send');
-Route::get('sistema-pos', 'VentasController@PosIndex')->name('ventas.pos');
-Route::post('pos/Detail/sale/{id}', 'VentasController@TotalProductosPost')->name('pos.detail');
 

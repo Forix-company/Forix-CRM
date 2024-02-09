@@ -242,7 +242,7 @@
     </div>
 </li>
 <li
-    class="nav-item {{ Request::is('configuracion') || Request::is('usuario') || Request::is('empresa') || Request::is('configuracion/payments') || Request::is('proveedor') || Request::is('configuracion/Auth/login') || Request::is('import/documents') || Request::is('configuracion/modulos') || Request::is('configuracion/plantillas') ? 'active' : '' }}">
+    class="nav-item {{ Request::is('configuracion') || Request::is('usuario') || Request::is('empresa') || Request::is('configuracion/payments') || Request::is('proveedor') || Request::is('configuracion/Auth/login') || Request::is('import/documents') || Request::is('configuracion/modulos') || Request::is('configuracion/plantillas') || Request::is('configuracion/copias-de-seguridad') ? 'active' : '' }}">
     <a href="{{ url('configuracion') }}">
         <i class="fas fa-cog"></i>
         <p>Configuracion</p>

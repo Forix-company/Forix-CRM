@@ -63,6 +63,7 @@ Route::middleware(['auth', 'verified', '2fa'])->group(function () {
         Route::get('usuario/{usuario}/edit', 'UsuarioController@edit')->name('usuario.edit');
         Route::patch('usuario/{usuario}', 'UsuarioController@update')->name('usuario.update');
     });
+    
     Route::resource('usuario', UsuarioController::class)->except(['edit', 'update']);
     Route::resource('configuracion/modulos', ModulesController::class);
     Route::resource('informes', InformesController::class);

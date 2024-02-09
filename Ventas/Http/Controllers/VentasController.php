@@ -264,20 +264,4 @@ class VentasController extends Controller
 
         return view('ventas::show', compact('DescripcionVentas', 'Pago'));
     }
-
-    public function PosIndex()
-    {
-        $Productos = Productos::all();
-        return view('ventas::POS.index', compact('Productos'));
-    }
-    public function TotalProductosPost(Request $request)
-    {
-        $Productos = Productos::find($request->id);
-        $response = [
-            'nombre' => strtoupper($Productos->name_products),
-            'price' => "$" . number_format($Productos->price, 2, '.', ','),
-        ];
-
-        return $response;
-    }
 }

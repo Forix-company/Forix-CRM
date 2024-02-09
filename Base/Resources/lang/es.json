@@ -1,0 +1,13 @@
+{
+    "welcome": "Bienvenido a Forix",
+    "messages.welcome.subtitle": "Software CRM",
+
+    "index.categorys": "CATEGORIAS",
+    "index.labels": "ETIQUETAS",
+    "index.manufactory": "FABRICANTES",
+    "index.prodcuts": "PRODUCTOS",
+    "index.inventory": "INVENTARIO",
+    "index.return.inventory": "DEVOLUCION INVENTARIO",
+    "index.stadistics": "INFORMES",
+    "index.contability": "CONTABILIDAD"
+}

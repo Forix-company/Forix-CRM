@@ -9,7 +9,6 @@
             <h5 class="text-white op-7 mb-2">En este Modulo puedes Visualizar las Ventas realizadas</h5>
         </div>
         <div class="ml-md-auto py-2 py-md-0">
-            <a href="{{ route('ventas.pos') }}" class="btn btn-danger btn-round">Ingresar al POS</a>
             <a href="#" data-toggle="modal" data-target="#createSales" class="btn btn-danger btn-round">Crear Venta</a>
         </div>
     </div>
