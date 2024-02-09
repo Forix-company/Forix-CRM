@@ -18,11 +18,11 @@
     "require": {
         "barryvdh/laravel-dompdf": "^2.0",
         "laravelcollective/html": "^6.3",
-        "maatwebsite/excel": "^3.1",
+        "maatwebsite/excel": "*",
         "bacon/bacon-qr-code": "^2.0",
         "pragmarx/google2fa-laravel": "^2.1",
         "pragmarx/google2fa-qrcode": "^3.0",
-        "spatie/laravel-backup": "^6.16"
+        "spatie/laravel-backup": "*"
     },
     "autoload": {
         "psr-4": {
