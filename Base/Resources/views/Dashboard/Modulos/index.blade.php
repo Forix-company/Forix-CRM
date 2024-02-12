@@ -2,8 +2,8 @@
 @section('page-inner')
     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
         <div>
-            <h2 class="text-white pb-2 fw-bold">Administrador de Modulos</h2>
-            <h5 class="text-white op-7 mb-2">En este administrador de Modulo asignarle modulos a Usuarios</h5>
+            <h2 class="text-white pb-2 fw-bold">{{__('modules.admin.title')}}</h2>
+            <h5 class="text-white op-7 mb-2">{{__('modules.admin.subtitle')}}</h5>
         </div>
     </div>
 @endsection
@@ -41,8 +41,8 @@
                             @endforeach
                         </div>
                         <div class="col-sm-12 form-group">
-                            {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
-                            <a href="{{ url('configuracion') }}" class="btn btn-danger">Atras</a>
+                            {!! Form::submit(__('button.create'), ['class' => 'btn btn-primary']) !!}
+                            <a href="{{ url('configuracion') }}" class="btn btn-danger">{{__('button.back')}}</a>
                         </div>
                         {!! Form::close() !!}
                     </div>

@@ -33,7 +33,7 @@ class HomeController extends Controller
 
     function plantillas_index()
     {
-        $plantilla = plantilla::all();
+        $plantilla = plantilla::first();
         return view('base::Dashboard.Plantillas.index', compact('plantilla'));
     }
 

@@ -11,51 +11,49 @@
                         {!! Form::model($User, ['method' => 'PATCH', 'route' => ['usuario.update', $User->id], 'files' => 'true']) !!}
                         <div class="row">
                             <div class="col-sm-12 text-center">
-                                <h1 class="font-weight-bold">ACTUALIZAR DATOS DEL USUARIOS </h1>
+                                <h1 class="font-weight-bold">{{__('user.edit.title')}}</h1>
                             </div>
                         </div>
                         <div class="dropdown-divider"></div>
                         <div class="row">
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Nombre Completo') !!} <span style="color: red">*</span>
+                                {!! Form::label(__('user.index.create.user.name')) !!} <span style="color: red">*</span>
                                 {!! Form::text('NombreCompleto', $User->name, ['class' => 'form-control','required']) !!}
                             </div>
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Foto Avatar') !!}
+                                {!! Form::label(__('user.index.create.user.photo')) !!}
                                 {!! Form::file('foto', ['class' => 'form-control', 'accept' => 'image/*']) !!}
                             </div>
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Correo Electronico') !!} <span style="color: red">*</span>
+                                {!! Form::label(__('user.index.create.user.email')) !!} <span style="color: red">*</span>
                                 {!! Form::email('email', $User->email, ['class' => 'form-control','required']) !!}
                             </div>
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Contraseña') !!} <span style="color: red">*</span>
+                                {!! Form::label(__('user.index.create.user.pass')) !!} <span style="color: red">*</span>
                                 {!! Form::password('password', ['id'=>'password','class' => 'form-control','required']) !!}
                             </div>
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Seleccione Cargo') !!} <span style="color: red">*</span>
-                                <select name="user_id" class="form-control" required>
-                                    <option value="" selected disabled>Seleccione un rol</option>
-                                    <option value="1" @if ($User->user_id == 1) selected @endif>Administrador
-                                    </option>
-                                    <option value="2" @if ($User->user_id == 2) selected @endif>Supervisor
-                                    </option>
-                                    <option value="3" @if ($User->user_id == 3) selected @endif>Usuario
-                                    </option>
-                                </select>
+                                {!! Form::label(__('user.index.create.user.Burden')) !!} <span style="color: red">*</span>
+                                {!! Form::select(
+                                    'user_id',
+                                    ['' => 'Seleccione un rol', '1' => __('user.index.roles.admin'), '2' => __('user.index.roles.supervisor'), '3' => __('user.index.roles.user')],
+                                    $User->user_id,
+                                    ['class' => 'form-control', 'disabled'],
+                                ) !!}
                             </div>
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Activar Autenticacion Doble Factor') !!}
-                                {!! Form::select('login_2fa_statu', ['1' => 'Predeterminado', '2' => 'Autenticacion doble factor'], $User->login_2fa_statu, [
+                                {!! Form::label(__('user.index.create.user.method.active.auth')) !!}
+                                {!! Form::select('login_2fa_statu', ['1' => __('user.index.create.user.method.active.auth.default'),
+                                 '2' => __('user.index.create.user.method.active.auth.2fa')], $User->login_2fa_statu, [
                                     'id' => 'login_2fa',
                                     'class' => 'form-control',
                                 ]) !!}
                             </div>
                             <div class="col-sm-12 form-group">
                                 {!! Form::hidden('', auth()->user()->id, ['class' => 'btn btn-primary','id' => 'user_id']) !!}
-                                {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
-                                <a href="{{ url('/') }}" class="btn btn-secondary">Volver al Inicio</a>
-                                <a href="{{ route('usuario.index') }}" class="btn btn-danger">Ir a Usuarios</a>
+                                {!! Form::submit(__('button.create'), ['class' => 'btn btn-primary']) !!}
+                                <a href="{{ url('/') }}" class="btn btn-secondary">{{__('button.back.index')}}</a>
+                                <a href="{{ route('usuario.index') }}" class="btn btn-danger">{{__('button.back.user')}}</a>
                             </div>
                         </div>
                         {!! Form::close() !!}
@@ -76,15 +74,15 @@
                 <div class="modal-body">
                     <div class="row text-center">
                         <div class="col-sm-12 form-group">
-                            <h1 class="font-weight-bold">Autenticación con contraseña de un solo uso</h1>
-                            <h2 class="font-weight-bold">Por favor escanear el Codigo QR</h2>
+                            <h1 class="font-weight-bold">{{__('user.edit.qr.title')}}</h1>
+                            <h2 class="font-weight-bold">{{__('user.edit.qr.subtitle')}}</h2>
                         </div>
                         <div class="col-sm-12 form-group">
                             <div id="CodeQrStatus"></div>
                             <div id="CodeQr"></div>
                         </div>
                         <div class="col-sm-12 form-group">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Atras</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">{{__('button.back')}}</button>
                         </div>
                     </div>
                 </div>

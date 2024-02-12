@@ -14,12 +14,12 @@
                         <div class="row">
                             @if ($User->foto)
                                 <div class="col-sm-12 text-center">
-                                    <img src="{{ asset($User->foto) }}" alt="Foto Avatar"  class="img-thumbnail" width="200"
+                                    <img src="{{ asset($User->foto) }}" alt="{{__('user.index.create.user.photo')}}" class="img-thumbnail" width="200"
                                         height="200">
                                 </div>
                             @else
                                 <div class="col-sm-12 text-center">
-                                    <img src="{{ asset('img/avatar_default.png') }}" alt="Foto Avatar" width="150"
+                                    <img src="{{ asset('img/avatar_default.png') }}" alt="{{__('user.index.create.user.photo')}}" width="150"
                                         height="150">
                                 </div>
                             @endif
@@ -27,24 +27,24 @@
                         <div class="dropdown-divider"></div>
                         <div class="row">
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Nombre Completo') !!}
+                                {!! Form::label(__('user.index.create.user.name')) !!}
                                 {!! Form::text('Nombre', $User->name, ['class' => 'form-control', 'readonly']) !!}
                             </div>
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Correo Electronico') !!}
+                                {!! Form::label(__('user.index.create.user.email')) !!}
                                 {!! Form::email('Nombre', $User->email, ['class' => 'form-control', 'readonly']) !!}
                             </div>
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Seleccione Cargo') !!}
+                                {!! Form::label(__('user.index.create.user.Burden')) !!}
                                 {!! Form::select(
                                     'user_id',
-                                    ['' => 'Seleccione un rol', '1' => 'Administrador', '2' => 'Supervisor', '3' => 'Usuario'],
+                                    ['' => 'Seleccione un rol', '1' => __('user.index.roles.admin'), '2' => __('user.index.roles.supervisor'), '3' => __('user.index.roles.user')],
                                     $User->user_id,
                                     ['class' => 'form-control', 'disabled'],
                                 ) !!}
                             </div>
                             <div class="col-sm-6 form-group">
-                                {!! Form::label('Metodo de Autenticacion') !!}
+                                {!! Form::label(__('user.index.create.user.method.auth')) !!}
                                 @if ($User->login_2fa_statu == 0)
                                     {!! Form::text(null, 'Predeterminado', ['class' => 'form-control', 'readonly']) !!}
                                 @else

@@ -2,9 +2,8 @@
 @section('page-inner')
     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
         <div>
-            <h2 class="text-white pb-2 fw-bold">Modulo Autenticacion</h2>
-            <h5 class="text-white op-7 mb-2">En este Modulo puede Actualizar o Cambiar la Autenticacion de todos los usuarios
-            </h5>
+            <h2 class="text-white pb-2 fw-bold">{{__('auth.title')}}</h2>
+            <h5 class="text-white op-7 mb-2">{{__('auth.subtitle')}}</h5>
         </div>
     </div>
 @endsection
@@ -19,10 +18,10 @@
                                 <thead class="bg-primary text-white">
                                     <tr>
                                         <th>#</th>
-                                        <th>Sistema de Logueo</th>
-                                        <th>Autenticacion Adicional</th>
-                                        <th>Estado</th>
-                                        <th>Acciones</th>
+                                        <th>{{__('auth.table.login')}}</th>
+                                        <th>{{__('auth.table.option.auth')}}</th>
+                                        <th>{{__('auth.table.status')}}</th>
+                                        <th>{{__('auth.table.options')}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -30,35 +29,35 @@
                                         <tr>
                                             <td>{{ $auth->id }}</td>
                                             <td>
-                                                @if ($auth->descriptions == 'Predeterminado')
-                                                    Predeterminado
+                                                @if ($auth->id == 1)
+                                                {{__('auth.table.login.auth.default')}}
                                                 @endif
-                                                @if ($auth->descriptions == 'Predeterminado + Autenticacion doble factor')
-                                                    Predeterminado + Autenticacion doble factor
+                                                @if ($auth->id == 2)
+                                                {{__('auth.table.login.auth.2fa')}}
                                                 @endif
                                             </td>
                                             <td>
                                                 @if ($auth->add_auth == 0)
-                                                    No Habilitado
+                                                {{__('auth.table.option.disabled')}}
                                                 @else
-                                                    Habilitado
+                                                {{__('auth.table.option.enabled')}}
                                                 @endif
                                             </td>
                                             <td>
                                                 @if ($auth->status == 1)
                                                     <div class="badge badge-success text-wrap" style="width: 6rem;">
-                                                        ACTIVO
+                                                        {{__('auth.table.status.enabled')}}
                                                     </div>
                                                 @else
                                                     <div class="badge badge-danger text-wrap" style="width: 6rem;">
-                                                        DESACTIVAR
+                                                        {{__('auth.table.status.disabled')}}
                                                     </div>
                                                 @endif
                                             </td>
                                             <td>
                                                 {!! Form::open(['method' => 'POST', 'route' => ['settings_auth', $auth->id]]) !!}
                                                 {!! Form::hidden('estado', $auth->id, ['class' => 'form-control']) !!}
-                                                {!! Form::submit('ACTIVAR', ['class' => 'btn btn-primary']) !!}
+                                                {!! Form::submit(__('auth.button'), ['class' => 'btn btn-primary']) !!}
                                                 {!! Form::close() !!}
                                             </td>
                                         </tr>
@@ -66,7 +65,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <a href="{{ url('configuracion') }}" class="btn btn-danger">Volver Atras</a>
+                        <a href="{{ url('configuracion') }}" class="btn btn-danger">{{__('button.back')}}</a>
                     </div>
                 </div>
             </div>

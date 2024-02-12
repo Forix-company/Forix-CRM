@@ -2,8 +2,8 @@
 @section('page-inner')
     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
         <div>
-            <h2 class="text-white pb-2 fw-bold">Estadisticas En Tiempo Real</h2>
-            <h5 class="text-white op-7 mb-2">Información Diaria Sobre Estadísticas En El Sistema.</h5>
+            <h2 class="text-white pb-2 fw-bold">{{ __('stadistics.title') }}</h2>
+            <h5 class="text-white op-7 mb-2">{{ __('stadistics.subtitle') }}</h5>
         </div>
     </div>
 @endsection
@@ -342,7 +342,7 @@
             <div class="col-md-12">
                 <div class="card full-height">
                     <div class="card-body text-center">
-                        <h2>ESTADISTICAS DE INGRESOS Y GASTOS TOTALES</h2>
+                        <h2>{{ __('stadistics.income.title') }}</h2>
                     </div>
                 </div>
             </div>
@@ -350,7 +350,7 @@
             <div class="col-md-4">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <div class="card-title">Ventas Realizadas en el Dia</div>
+                        <div class="card-title">{{ __('stadistics.sale.day.title') }}</div>
                         <div class="card-category">{{ \Carbon\Carbon::now()->locale('es')->isoFormat('DD [de] MMMM') }}
                         </div>
                     </div>
@@ -365,7 +365,7 @@
             <div class="col-md-4">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <div class="card-title">Ventas Realizadas en la semana</div>
+                        <div class="card-title">{{ __('stadistics.sale.week.title') }}</div>
                         <div class="card-category">
                             {{ \Carbon\Carbon::now()->locale('es')->subDays(8)->isoFormat('DD [de] MMMM') }} -
                             {{ \Carbon\Carbon::now()->locale('es')->subDays(2)->isoFormat('DD [de] MMMM') }}</div>
@@ -381,7 +381,7 @@
             <div class="col-md-4">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <div class="card-title">Ventas Realizadas en el mes</div>
+                        <div class="card-title">{{ __('stadistics.sale.month.title') }}</div>
                         <div class="card-category">
                             {{ \Carbon\Carbon::now()->locale('es')->startOfMonth()->isoFormat('DD [de] MMMM') }} -
                             {{ \Carbon\Carbon::now()->locale('es')->endOfMonth()->isoFormat('DD [de] MMMM') }}</div>
@@ -400,11 +400,11 @@
                         <div class="row py-3">
                             <div class="col-md-4 d-flex flex-column justify-content-around">
                                 <div>
-                                    <h6 class="fw-bold text-uppercase text-success op-8">ingreso totales</h6>
+                                    <h6 class="fw-bold text-uppercase text-success op-8">{{ __('stadistics.sale.day.total') }}</h6>
                                     <h3 class="fw-bold">{{ $total_ingresos }}</h3>
                                 </div>
                                 <div>
-                                    <h6 class="fw-bold text-uppercase text-danger op-8">Gasto totales</h6>
+                                    <h6 class="fw-bold text-uppercase text-danger op-8">{{ __('stadistics.sale.day.expenses') }}</h6>
                                     <h3 class="fw-bold">{{ $total_gastos }}</h3>
                                 </div>
                             </div>
@@ -421,7 +421,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">ordenes de compra</div>
+                        <div class="card-title">{{ __('stadistics.orders.buys') }}</div>
                     </div>
                     <div class="card-body">
                         <div class="chart-container">
@@ -434,7 +434,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">INGRESOS Y GASTOS DURANTE TODO EL AÑO</div>
+                        <div class="card-title">{{ __('stadistics.sales.and.expenses') }}</div>
                     </div>
                     <div class="card-body">
                         <div class="chart-container">
@@ -452,7 +452,7 @@
             <div class="col-md-12">
                 <div class="card full-height">
                     <div class="card-body text-center">
-                        <h2>ESTADISTICAS DE INVENTARIO Y DEVOLUCIONES</h2>
+                        <h2>{{ __('stadistics.inventory.return.inventory') }}</h2>
                     </div>
                 </div>
             </div>
@@ -460,11 +460,11 @@
             <div class="col-sm-6 col-md-6">
                 <div class="card card-stats card-round">
                     <div class="card-body">
-                        <div class="card-title">Ingreso de Inventario</div>
+                        <div class="card-title">{{ __('stadistics.income.inventory') }}</div>
                         <div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-inventario"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Total Ingreso</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.income.total.inventory') }}</h6>
                             </div>
                         </div>
                     </div>
@@ -474,11 +474,11 @@
             <div class="col-sm-6 col-md-6">
                 <div class="card card-stats card-round">
                     <div class="card-body">
-                        <div class="card-title">Devolucion de Inventario</div>
+                        <div class="card-title">{{ __('stadistics.return.inventory') }}</div>
                         <div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-devolucion"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Total Devoluciones</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.return.total.inventory') }}</h6>
                             </div>
                         </div>
                     </div>
@@ -493,7 +493,7 @@
             <div class="col-md-12">
                 <div class="card full-height">
                     <div class="card-body text-center">
-                        <h2>ESTADISTICAS DE PRODUCTOS - CATEGORIAS - ETIQUETAS</h2>
+                        <h2>{{ __('stadistics.products.category.labels') }}</h2>
                     </div>
                 </div>
             </div>
@@ -501,23 +501,23 @@
             <div class="col-md-6">
                 <div class="card full-height">
                     <div class="card-body">
-                        <div class="card-title">Estadisticas total de Productos</div>
+                        <div class="card-title">{{ __('stadistics.products.total') }}</div>
                         <div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-Productos"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Nuevos Productos</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.products.now') }}</h6>
                             </div>
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-Activos"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Activos</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.products.actived') }}</h6>
                             </div>
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-Suspendidos"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Suspendidos</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.products.suspended') }}</h6>
                             </div>
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-Cancelados"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Cancelados</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.products.canceled') }}</h6>
                             </div>
                         </div>
                     </div>
@@ -527,19 +527,19 @@
             <div class="col-md-6">
                 <div class="card full-height">
                     <div class="card-body">
-                        <div class="card-title">Estadisticas total de Categorias - Etiquetas</div>
+                        <div class="card-title">{{ __('stadistics.total.cagetory.labels') }}</div>
                         <div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-Categorias"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Categorias</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.category') }}</h6>
                             </div>
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-Etiquetas"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Etiquetas</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.labels') }}</h6>
                             </div>
                             <div class="px-2 pb-2 pb-md-0 text-center">
                                 <div id="circles-factory"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Fabricantes</h6>
+                                <h6 class="fw-bold mt-3 mb-0">{{ __('stadistics.manufactory') }}</h6>
                             </div>
                         </div>
                     </div>

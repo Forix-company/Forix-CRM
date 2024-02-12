@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Informe de Inventario</title>
+    <title>{{__('pdf.inventory.export.navbar.title')}}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="text-center">
-        <h2>Productos en Inventario con Stock al minimo</h2>
+        <h2>{{__('pdf.reporting.title')}}</h2>
     </div>
     <table class="table">
         <thead class="thead-dark">
             <tr>
                 <th>#</th>
-                <th>Codigo Producto</th>
-                <th>Nombre Producto</th>
-                <th>Descripcion</th>
-                <th>Cantidad</th>
-                <th>Precio</th>
+                <th>{{__('pdf.reporting.table.code')}}</th>
+                <th>{{__('pdf.reporting.table.name')}}</th>
+                <th>{{__('pdf.reporting.table.desc')}}</th>
+                <th>{{__('pdf.reporting.table.quantity')}}</th>
+                <th>{{__('pdf.reporting.table.price')}}</th>
             </tr>
         </thead>
         <tbody>

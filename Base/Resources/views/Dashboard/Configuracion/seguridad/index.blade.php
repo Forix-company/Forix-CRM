@@ -2,8 +2,8 @@
 @section('page-inner')
     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
         <div>
-            <h2 class="text-white pb-2 fw-bold">Modulo De Importacion</h2>
-            <h5 class="text-white op-7 mb-2">En este Modulo puedes Realizar cargas masivas</h5>
+            <h2 class="text-white pb-2 fw-bold">{{__('backup.title')}}</h2>
+            <h5 class="text-white op-7 mb-2">{{__('backup.subtitle')}}</h5>
         </div>
     </div>
 @endsection
@@ -17,13 +17,13 @@
                             <table id="multi-filter-select" class="display table table-striped table-hover">
                                 <thead class="bg-primary text-white">
                                     <tr>
-                                        <th>id</th>
-                                        <th>Nombre</th>
-                                        <th>Incluye archivos</th>
-                                        <th>Incluye base de datos</th>
-                                        <th>Estado</th>
-                                        <th>Fecha creacion</th>
-                                        <th>Acciones</th>
+                                        <th>#</th>
+                                        <th>{{__('backup.table.name')}}</th>
+                                        <th>{{__('backup.table.files')}}</th>
+                                        <th>{{__('backup.table.database')}}</th>
+                                        <th>{{__('backup.table.status')}}</th>
+                                        <th>{{__('backup.table.date')}}</th>
+                                        <th>{{__('backup.table.options')}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -44,25 +44,25 @@
                                             <td>
                                                 @if ($backup->status == 1)
                                                     <div class="badge badge-success text-wrap" style="width: 6rem;">
-                                                        ACTIVO
+                                                        {{__('backup.table.status.enable')}}
                                                     </div>
                                                 @else
                                                     <div class="badge badge-danger text-wrap" style="width: 6rem;">
-                                                        INACTIVO
+                                                        {{__('backup.table.status.disabled')}}
                                                     </div>
                                                 @endif
 
                                             </td>
                                             <td>{{ $backup->date_create }}</td>
                                             <td><a href="{{ url('configuracion/descargar/copia',$backup->id) }}" target="_blank"
-                                                    class="btn btn-primary">descargar</a>
+                                                    class="btn btn-primary">{{__('backup.table.download')}}</a>
                                             </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
                             </table>
                         </div>
-                        <a href="{{ url('configuracion') }}" class="btn btn-danger">Ir a Configuracion</a>
+                        <a href="{{ url('configuracion') }}" class="btn btn-danger">{{__('button.back.configuration')}}</a>
                     </div>
                 </div>
             </div>
